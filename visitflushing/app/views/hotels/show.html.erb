@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hotel.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hotel.description %>
+</p>
+
+<p>
+  <strong>Reservationurl:</strong>
+  <%= @hotel.reservationurl %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @hotel.imageurl %>
+</p>
+<img src="<%= @hotel.imageurl %>" alt="<%= @hotel.name %>" width="500" height="333">
+
+<p>
+  <strong>Videourl:</strong>
+  <%= @hotel.videourl %>
+</p>
+
+<iframe width="560" height="315" src="<%= @hotel.videourl %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>
+  <strong>Address:</strong>
+  <%= @hotel.address %>
+</p>
+
+<p>
+  <strong>Geocode:</strong>
+  <%= @hotel.geocode %>
+</p>
+<!-- !PAGE CONTENT! -->
+            <div class="w3-main w3-content w3-padding" style="max-width:1200px">
+         	<!-- First Photo Grid -->
+         <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    		<div class="w3-quarter">
+			<img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/36/8e/02/exterior.jpg" alt="Hotel" style="width:100%">
+		<h3>Hyatt Place</h3>
+   <p>Our brand new, ultramodern 168 room Hyatt Place Flushing/LaGuardia Airport hotel is built atop three-glass levels
+        of world class retail shopping, a variety of ethnic and American restaurants, a separate office condominium tower
+        and 43 luxury furnished residential condominiums. Exclusively accessible only to hotel guests, the hotel also
+        features an expansive roof-top outdoor garden and restaurant & lounge with spectacular panoramic views of the Manhattan skyline.</p>
+<a title="Click for Rates/ Reservation" href="https://www.hyatt.com/en-US/hotel/new-york/hyatt-place-flushing-laguardia-airport/nyczf" class="w3-block w3-grey w3-button">Make a Reservation</a>
+ <br>
+	</div>
+  	<div class="w3-quarter">
+			<img src="https://media-cdn.tripadvisor.com/media/photo-s/13/6d/75/f2/ramada-flushing-queens.jpg" alt="Hotel" style="width:100%">
+	  		<h3>Ramada by Wyndham</h3>
+		    	<p>Ramada by Wyndham Flushing Queens is an excellent choice for travelers visiting Flushing, offering a family-friendly
+        environment alongside many helpful amenities designed to enhance your stay.</p>
+           <a title="Click for Rates/ Reservation" href="https://www.wyndhamhotels.com/ramada/flushing-new-york/ramada-flushing-queens/overview" class="w3-block w3-grey w3-button">Make a Reservation</a>
+        <br>
+		</div>
+		<div class="w3-quarter">
+			<img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/65/e4/60/exterior.jpg" alt="Hotel" style="width:100%">
+			<h3>Sheraton LaGuardia East</h3>
+			<p>Enjoy a warm welcome at beautiful Sheraton LaGuardia East Hotel. Located in Flushing, New York, our Chinatown Queens
+        hotel is just 3 miles away from the LaGuardia airport, accessible by our complimentary shuttle.</p>
+        <a title="Click for Rates/ Reservation" href="https://www.marriott.com/hotels/travel/lgasi-sheraton-laguardia-east-hotel/" class="w3-block w3-grey w3-button">Make a Reservation</a>
+        <br>
+		</div>
+		<div class="w3-quarter">
+			<img src="https://media.timeout.com/images/103749568/630/472/image.jpg" alt="Hotel" style="width:100%">
+			<h3>The Parc Hotel</h3>
+			<p>Experience culture, style, and sophistication at our hotel in Flushing, NY. Thoughtfully situated near Citi Field,
+        USTA, and downtown Flushing. Modern comfort and affordability await with stunning NYC skyline views, complimentary
+        buffet breakfast, free wifi, and two onsite restaurants. Ascend to our rooftop bar for sweeping views of LaGuardia
+        Airport, Citi Field, and the Manhattan skyline. Walking distance to both the Long Island Railroad and famed number 7 train.</p>
+        <a title="Click for Rates/ Reservation" href="https://www.theparchotel.com/" class="w3-block w3-grey w3-button">Make a Reservation</a>
+		</div>
+	</div>
+<%= render 'map'%>
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back', hotels_path %>
